@@ -17,7 +17,7 @@ alias ll='ls -avlF'
 alias ta='tmux attach -t'
 alias tl='tmux ls'
 alias tn='tmux new-session -s'
-alias tk='tmux kll-session -t'
+alias tk='tmux kill-session -t'
 
 alias b='cd ../'
 alias q='exit'
