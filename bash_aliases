@@ -14,7 +14,7 @@ alias cl='clear'
 alias ip='ipython'
 alias ll='ls -avlF'
 
-alias ta='tmux attach -t'
+alias ta='tmux attach -d -t'
 alias tl='tmux ls'
 alias tn='tmux new-session -s'
 alias tk='tmux kill-session -t'
