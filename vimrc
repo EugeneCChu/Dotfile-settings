@@ -27,4 +27,6 @@ nnoremap k gk
 set showmatch
 set hlsearch
 
+imap jj <Esc>
+
 au BufNewFile,BufRead .bashrc*,bashrc,bash.bashrc,.bash[_-]profile*,.bash[_-]logout*,.bash[_-]aliases*,*.bash,*/{,.}bash[_-]completion{,.d,.sh}{,/*},*.ebuild,*.eclass call SetFileTypeSH("bash")
