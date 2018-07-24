@@ -1,3 +1,5 @@
+" Put in ~/.vim/colors/
+
 runtime colors/evening.vim
 let colors_name = "black"
 
