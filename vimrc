@@ -17,7 +17,7 @@ set foldnestmax=10
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
 
-colorscheme evening
+colorscheme black
 
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
