@@ -12,7 +12,7 @@ alias vb='vim ~/.bash_aliases && source ~/.bashrc'
 alias op='xdg-open'
 alias cl='clear'
 alias ip='ipython'
-alias ll='ls -avlF'
+alias ll='ls -avltF'
 
 alias ta='tmux attach -d -t'
 alias tl='tmux ls'
