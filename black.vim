@@ -13,3 +13,5 @@ hi WildMenu term=standout ctermbg=Yellow ctermfg=Black guibg=Yellow guifg=Black
 hi Folded term=standout ctermbg=LightGrey ctermfg=DarkBlue guibg=LightGrey guifg=DarkBlue
 hi FoldColumn term=standout ctermbg=LightGrey ctermfg=DarkBlue guibg=LightGrey guifg=DarkBlue
 
+hi Pmenu ctermbg=LightGray ctermfg=Black
+hi PmenuSel ctermfg=Black ctermbg=DarkBlue
