@@ -2,7 +2,7 @@
 
 function tarx() {  tar -zxvf "$1";  }
 function tarc() {  tar -zcvf "$1.tgz" "$1";  }
-function g() { g++ -O3 -std=c++11 "$1" -o "${1::-4}"; }
+function g() { g++ -O3 -std=c++11 "$1" -o "${1%.*}"; }
 
 alias rm='rm -i'
 alias cp='cp -i'
