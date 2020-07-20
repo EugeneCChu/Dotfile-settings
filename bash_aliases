@@ -24,3 +24,5 @@ alias q='exit'
 alias v='vim'
 alias l='ls -avF'
 alias p='ipython3'
+
+alias tree='tree -N'
