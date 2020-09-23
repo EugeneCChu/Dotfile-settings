@@ -26,3 +26,6 @@ alias l='ls -avF'
 alias p='ipython3'
 
 alias tree='tree -N'
+
+bind "TAB:menu-complete"
+bind "set show-all-if-ambiguous on"
