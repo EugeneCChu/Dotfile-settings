@@ -27,8 +27,12 @@ nnoremap k gk
 
 inoremap jj <Esc>
 
+" Highlight TODO/FIXME/DRAFTS
+augroup HiglightTODO
 " Prevent duplicate auto-commands
-autocmd!
+    autocmd!
+    autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO\|FIXME\|DRAFT', 10)
+augroup END
 
 " Folds
 autocmd BufWinLeave *.* mkview
@@ -40,7 +44,4 @@ autocmd BufNewFile,BufRead .bashrc*,bashrc,bash.bashrc,.bash[_-]profile*,.bash[_
 " Remove marks
 autocmd VimLeave * :delm! | delm A-Z0-9
 
-" Highlight TODO/FIXME/DRAFTS
-augroup HiglightTODO
-    autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO\|FIXME\|DRAFT', 10)
-augroup END
+
