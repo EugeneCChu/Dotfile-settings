@@ -1,33 +1,46 @@
-set wildmenu
-set autoindent
 set ruler
 set number
+set hlsearch
+set wildmenu
+set showmatch
+set expandtab
+set autoindent
+set cursorline
+set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set tabstop=4
-set cursorline
-set expandtab
 
 set tags=./tags,tags;
 
 set foldenable
-set foldlevelstart=10
 set foldnestmax=10
+set foldlevelstart=10
 
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
+filetype plugin indent on
+syntax on
 
 colorscheme black
 
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+nnoremap <CR> o<Esc>
 nnoremap j gj
 nnoremap k gk
 
-set showmatch
-set hlsearch
+inoremap jj <Esc>
 
-inoremap { {<CR>}<Esc>ko
-imap jj <Esc>
+" Prevent duplicate auto-commands
+autocmd!
 
-au BufNewFile,BufRead .bashrc*,bashrc,bash.bashrc,.bash[_-]profile*,.bash[_-]logout*,.bash[_-]aliases*,*.bash,*/{,.}bash[_-]completion{,.d,.sh}{,/*},*.ebuild,*.eclass call SetFileTypeSH("bash")
+" Folds
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
+" Filetypes
+autocmd BufNewFile,BufRead .bashrc*,bashrc,bash.bashrc,.bash[_-]profile*,.bash[_-]logout*,.bash[_-]aliases*,*.bash,*/{,.}bash[_-]completion{,.d,.sh}{,/*},*.ebuild,*.eclass set filetype=sh
+
+" Remove marks
+autocmd VimLeave * :delm! | delm A-Z0-9
+
+" Highlight TODO/FIXME/DRAFTS
+augroup HiglightTODO
+    autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO\|FIXME\|DRAFT', 10)
+augroup END
