@@ -1,6 +1,6 @@
 set ruler
 set number
-"set hlsearch
+set hlsearch
 set wildmenu
 set showmatch
 set expandtab
