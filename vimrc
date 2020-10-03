@@ -18,7 +18,7 @@ set foldlevelstart=10
 
 set viminfo=<50,'10,/50,:50,f0,h
 "            |   |   |   |  |  | 
-"            |   |   |   |  |  + disable 'hlsearch' loading viminfo
+"            |   |   |   |  |  + disable 'hlsearch' on start
 "            |   |   |   |  + file marks 0-9,A-Z 0=NOT stored
 "            |   |   |   + command-line history saved
 "            |   |   + search history saved
