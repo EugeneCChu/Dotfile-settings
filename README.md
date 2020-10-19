@@ -1,5 +1,5 @@
 # Linux dotfile settings
-open ```supertab.vmb``` in ```vim``` and run 
+open ```supertab.vmb``` and ```searchindex.vmb``` in ```vim``` and run 
 ```
 :source %
 ```
