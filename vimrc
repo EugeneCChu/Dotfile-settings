@@ -13,6 +13,8 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
+set synmaxcol=0
+
 set tags=./tags,tags;
 
 set foldenable
