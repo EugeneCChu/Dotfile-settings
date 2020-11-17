@@ -15,7 +15,7 @@
 
 
 ### Shell
-- Add following lines to ```~/.bashrc```
+- Add following lines to ```~/.bashrc``` 
 
     ```
     if [ -f ~/.bash_aliases ]; then
