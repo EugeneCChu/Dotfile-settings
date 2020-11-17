@@ -1,11 +1,10 @@
 # Linux dotfile settings
 
-### Vim:
+### Vim
+- open ```supertab.vmb``` and ```searchindex.vmb``` in ```vim``` and run 
 
-    - open ```supertab.vmb``` and ```searchindex.vmb``` in ```vim``` and run 
+    ```
+    :source %
+    ```
 
-        ```
-        :source %
-        ```
-
-    - move ```black.vim``` to ```~/.vim/colors/```
+- move ```black.vim``` to ```~/.vim/colors/```
