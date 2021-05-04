@@ -1,1 +1,80 @@
-/Users/eugene/.bash_aliases
+function tarx() {  tar -zxvf "$1";  }
+function tarc() {  tar -zcvf "$1.tgz" "$1";  }
+function g() { g++ -O3 -std=c++11 "$1" -o "${1%.*}"; }
+
+function svr()
+{
+    local user=''
+    local host=''
+
+    if [ "${1:0:1}" = "h" ]
+    then
+        user='eugenech'
+        host='login1.hoffman2.idre.ucla.edu'
+    elif [ "${1:0:1}" = "s" ]
+    then
+        user='chu'
+        host='eeapps01.seas.ucla.edu'
+    elif [ "${1:0:1}" = "d" ]
+    then
+        user='eugenec'
+        host='dfm.ee.ucla.edu'
+    elif [ "${1:0:1}" = "m" ]
+    then
+        user='eugenec'
+        host='mfd.ee.ucla.edu'
+    elif [ "${1:0:1}" = "n" ]
+    then
+        user='eugenec'
+        host='nanocgpu.ee.ucla.edu'
+    else
+        printf "\nUsage: svr [Hfm2/Seas/Dfm/Mfd/Nanocgpu] [Sftp]\n"
+        printf "\nServers:
+        \n\thfm2 (eugenech@login1.hoffman2.idre.ucla.edu)
+        \n\tseas (chu@eeapps01.seas.ucla.edu)
+        \n\tdfm  (eugenec@dfm.ee.ucla.edu)
+        \n\tmfd  (eugenec@mfd.ee.ucla.edu)
+        \n\tnano (eugenec@nanocgpu.ee.ucla.edu)
+        \n"
+        return 1
+    fi
+    if [ "${2:0:1}" = "s" ]     # SFTP
+    then
+        sftp "$user@$host"
+    else
+        ssh -Y "$user@$host"
+    fi
+}
+
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+
+alias sinica='ssh -Y eugenechu@140.109.21.233'
+alias cdd='cd ~/Desktop'
+alias ptt='ssh bbsu@ptt.cc'
+alias vb='vim ~/.bash_aliases && source ~/.bash_aliases'
+alias cl='clear'
+
+# gls does not show files in google filestream
+# Use /bin/ls despite it not having natural sort
+alias gls='gls --color=auto -v'
+
+alias ll='gls --color=auto -avlthF'
+
+alias ta='tmux attach -d -t'
+alias tl='tmux ls'
+alias tn='tmux new-session -s'
+alias tk='tmux kill-session -t'
+
+alias b='cd ../'
+alias q='exit'
+alias v='vim'
+alias p='ipython3'
+alias l='ls -aGpF'
+
+alias ft='wine ~/Documents/Games/Warcraft_III/war3.exe' 
+alias tree='tree -N'
+
