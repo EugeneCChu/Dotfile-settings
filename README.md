@@ -10,8 +10,19 @@
 - move ```black.vim``` to ```~/.vim/colors/```
 
 
-### iTerm2
+### Terminal/iTerm2
+
+#### iTerm
 - Import profile ```Material.json``` and color preset ```Material.itermcolors```
+
+#### Terminal
+- Load settings with
+
+    ```
+    dconf load /org/gnome/terminal/legacy/profiles:/ < terminal.pref
+    ```
+
+
 
 
 ### Shell
