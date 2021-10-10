@@ -1,0 +1,20 @@
+[legacy/keybindings]
+new-window='<Primary><Alt>t'
+new-tab='<Primary>t'
+
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+foreground-color='rgb(236,239,241)'
+visible-name='iTerm'
+palette=['rgb(37,37,37)', 'rgb(255,82,82)', 'rgb(105,240,174)', 'rgb(255,215,64)', 'rgb(64,196,255)', 'rgb(255,64,129)', 'rgb(100,252,218)', 'rgb(255,255,255)', 'rgb(176,190,197)', 'rgb(255,138,128)', 'rgb(185,246,202)', 'rgb(255,229,127)', 'rgb(128,216,255)', 'rgb(255,128,171)', 'rgb(167,254,219)', 'rgb(255,255,255)']
+default-size-rows=25
+use-system-font=false
+use-theme-colors=false
+font='Monaco 12'
+use-theme-transparency=true
+scrollback-unlimited=true
+bold-color-same-as-fg=false
+bold-color='rgb(238,238,238)'
+background-color='rgb(38,50,56)'
+
+[legacy]
+schema-version=uint32 3
